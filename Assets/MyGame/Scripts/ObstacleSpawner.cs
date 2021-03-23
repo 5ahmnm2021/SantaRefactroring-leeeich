@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleSpawner : MonoBehaviour
-{
+{   
     public static ObstacleSpawner instance;
 
     public GameObject[] obstacles;
@@ -24,13 +24,7 @@ public class ObstacleSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Spawn");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        StartCoroutine(Spawn());
     }
 
     IEnumerator Spawn()
