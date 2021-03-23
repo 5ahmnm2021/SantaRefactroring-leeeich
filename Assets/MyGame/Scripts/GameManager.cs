@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
+    private const string Scene = "MainScene";
+    private const string Scene1 = "MenueScene";
     public static GameManager instance;
     public GameObject gameOverPanel;
     public Text scoreText;
@@ -38,12 +39,12 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(Scene);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(Scene1);
     }
 
     public void IncrementScore()
